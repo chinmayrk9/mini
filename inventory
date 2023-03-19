@@ -1,3 +1,2 @@
-[local]
-localhost ansible_connection=local
-
+[hostGroup]
+firstHost ansible_host=192.168.239.129 ansible_connection=ssh ansible_user=user1 ansible_sudo_pass=1498
