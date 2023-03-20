@@ -24,14 +24,10 @@ public class Main { private static final Logger logger = LogManager.getLogger(Ma
             System.out.print("Please Enter Your Choice: ");
 
             int choice;
-            try {
+
                 choice = scanner.nextInt();
                 logger.info("User's choice is: " + choice);
-            } catch (InputMismatchException exception) {
-                 logger.error("Exception while taking input from user: " + exception.getLocalizedMessage());
-                System.err.println(exception.getLocalizedMessage());
-                return;
-            }
+
 
             double operand1 = 0.0, operand2 = 0.0;
             switch (choice) {
@@ -39,55 +35,43 @@ public class Main { private static final Logger logger = LogManager.getLogger(Ma
                     // Case 1 -> Square root function
                     logger.info("Using square root function...");
                     System.out.print("\nEnter the Number: ");
-                    try {
+
                         operand1 = scanner.nextDouble();
                          logger.info("User's input for square root: " + operand1);
-                    } catch (InputMismatchException exception) {
-                          logger.error("Exception while taking input: " + exception.getLocalizedMessage());
-                        System.err.println(exception.getLocalizedMessage());
-                    }
+
                     System.out.println("\nSquare root of " + operand1 + " is: " + main.squareRoot(operand1));
                     break;
                 case 2:
                     // Case 2 -> Factorial Function
                      logger.info("Using the factorial function...");
                     System.out.print("\nEnter a Number: ");
-                    try {
+
                         operand1 = scanner.nextDouble();
                          logger.info("User's input for factorial: " + operand1);
-                    } catch (InputMismatchException exception) {
-                         logger.error("Exception while taking input: " + exception.getLocalizedMessage());
-                        System.err.println(exception.getLocalizedMessage());
-                    }
+
                     System.out.println("\nFactorial of " + operand1 + " is: " + main.factorial(operand1));
                     break;
                 case 3:
                     // Case 3 -> Natural log function
                      logger.info("Using the natural log function...");
                     System.out.print("\nEnter a Number: ");
-                    try {
+
                         operand1 = scanner.nextDouble();
                          logger.info("User's input for square root: " + operand1);
-                    } catch (InputMismatchException exception) {
-                          logger.error("Exception while taking input: " + exception.getLocalizedMessage());
-                        System.err.println(exception.getLocalizedMessage());
-                    }
+
                     System.out.println("\nNatural log of " + operand1 + " is: " + main.naturalLog(operand1));
                     break;
                 case 4:
                     // Subtraction Case
                      logger.info("Using the subtraction function...");
-                    try {
+
                         System.out.print("\nEnter the Number: ");
                         operand1 = scanner.nextDouble();
                         logger.info("User's input for number: " + operand1);
                         System.out.print("\nEnter the Power: ");
                         operand2 = scanner.nextDouble();
                          logger.info("User's input for power: " + operand2);
-                    } catch (InputMismatchException exception) {
-                          logger.error("Exception while taking input: " + exception.getLocalizedMessage());
-                        System.err.println(exception.getLocalizedMessage());
-                    }
+
                     System.out.println("\n" + operand1 + " power " + operand2 + " is: " + main.power(operand1, operand2));
                     break;
                 default:
