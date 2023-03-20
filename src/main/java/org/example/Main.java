@@ -1,10 +1,13 @@
 package org.example;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-public class Main {
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+public class Main { private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
         // Starting of calculator work...
-        // logger.info("Starting the Calculator Application.");
+        logger.info("Starting the Calculator Application.");
 
         Scanner scanner = new Scanner(System.in);
         Main main =new Main();
@@ -23,9 +26,9 @@ public class Main {
             int choice;
             try {
                 choice = scanner.nextInt();
-                // logger.info("User's choice is: " + choice);
+                logger.info("User's choice is: " + choice);
             } catch (InputMismatchException exception) {
-                // logger.error("Exception while taking input from user: " + exception.getLocalizedMessage());
+                 logger.error("Exception while taking input from user: " + exception.getLocalizedMessage());
                 System.err.println(exception.getLocalizedMessage());
                 return;
             }
@@ -34,61 +37,61 @@ public class Main {
             switch (choice) {
                 case 1:
                     // Case 1 -> Square root function
-                    // logger.info("Using square root function...");
+                    logger.info("Using square root function...");
                     System.out.print("\nEnter the Number: ");
                     try {
                         operand1 = scanner.nextDouble();
-                        // logger.info("User's input for square root: " + operand1);
+                         logger.info("User's input for square root: " + operand1);
                     } catch (InputMismatchException exception) {
-                        //  logger.error("Exception while taking input: " + exception.getLocalizedMessage());
+                          logger.error("Exception while taking input: " + exception.getLocalizedMessage());
                         System.err.println(exception.getLocalizedMessage());
                     }
                     System.out.println("\nSquare root of " + operand1 + " is: " + main.squareRoot(operand1));
                     break;
                 case 2:
                     // Case 2 -> Factorial Function
-                    // logger.info("Using the factorial function...");
+                     logger.info("Using the factorial function...");
                     System.out.print("\nEnter a Number: ");
                     try {
                         operand1 = scanner.nextDouble();
-                        // logger.info("User's input for factorial: " + operand1);
+                         logger.info("User's input for factorial: " + operand1);
                     } catch (InputMismatchException exception) {
-                        //  logger.error("Exception while taking input: " + exception.getLocalizedMessage());
+                         logger.error("Exception while taking input: " + exception.getLocalizedMessage());
                         System.err.println(exception.getLocalizedMessage());
                     }
                     System.out.println("\nFactorial of " + operand1 + " is: " + main.factorial(operand1));
                     break;
                 case 3:
                     // Case 3 -> Natural log function
-                    // logger.info("Using the natural log function...");
+                     logger.info("Using the natural log function...");
                     System.out.print("\nEnter a Number: ");
                     try {
                         operand1 = scanner.nextDouble();
-                        // logger.info("User's input for square root: " + operand1);
+                         logger.info("User's input for square root: " + operand1);
                     } catch (InputMismatchException exception) {
-                        //  logger.error("Exception while taking input: " + exception.getLocalizedMessage());
+                          logger.error("Exception while taking input: " + exception.getLocalizedMessage());
                         System.err.println(exception.getLocalizedMessage());
                     }
                     System.out.println("\nNatural log of " + operand1 + " is: " + main.naturalLog(operand1));
                     break;
                 case 4:
                     // Subtraction Case
-                    // logger.info("Using the subtraction function...");
+                     logger.info("Using the subtraction function...");
                     try {
                         System.out.print("\nEnter the Number: ");
                         operand1 = scanner.nextDouble();
-                        // logger.info("User's input for number: " + operand1);
+                        logger.info("User's input for number: " + operand1);
                         System.out.print("\nEnter the Power: ");
                         operand2 = scanner.nextDouble();
-                        // logger.info("User's input for power: " + operand2);
+                         logger.info("User's input for power: " + operand2);
                     } catch (InputMismatchException exception) {
-                        //  logger.error("Exception while taking input: " + exception.getLocalizedMessage());
+                          logger.error("Exception while taking input: " + exception.getLocalizedMessage());
                         System.err.println(exception.getLocalizedMessage());
                     }
                     System.out.println("\n" + operand1 + " power " + operand2 + " is: " + main.power(operand1, operand2));
                     break;
                 default:
-                    //          logger.fatal("User is exiting the calculator application.");
+                             logger.debug("User is exiting the calculator application.");
                     System.out.println("Exiting the Calculator!!!!!");
                     return;
             }
@@ -96,33 +99,33 @@ public class Main {
     }
 
     public double power(double operand1, double operand2) {
-        // logger.info("Calculating " + operand1 + "^" + operand2 + ".");
+
         double res = Math.pow(operand1, operand2);
-        // logger.info("Result: " + operand1 + "^" + operand2 + " = " + res + ".");
+         logger.info("Result: " + operand1 + "^" + operand2 + " = " + res + ".");
         return res;
     }
 
     public double naturalLog(double operand) {
-        // logger.info("Calculating log(" + operand + ").");
+
         double res = Math.log(operand);
-        // logger.info("Result: log(" + operand + ") = " + res + ".");
+        logger.info("Result: log(" + operand + ") = " + res + ".");
         return res;
     }
 
     public double factorial(double operand) {
-        // logger.info("Calculating " + operand + "! [! mean factorial].");
+
         double res = 1;
         for (int i = 1; i <= (int) operand; i++) {
             res *= i;
         }
-        //  logger.info("Result: " + operand + "! = " + res + ".");
+          logger.info("Result: " + operand + "! = " + res + ".");
         return res;
     }
 
     public double squareRoot(double operand) {
-      //  logger.info("Calculating square root of " + operand + ".");
+
         double res = Math.sqrt(operand);
-      //  logger.info("Result: " + operand + "^0.5 = " + res + ".");
+       logger.info("Result: " + operand + "^0.5 = " + res + ".");
         return res;
     }
 

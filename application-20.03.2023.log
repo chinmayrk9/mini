@@ -1,0 +1,12 @@
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 10] --> Starting the Calculator Application.
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 29] --> User's choice is: 1
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 40] --> Using square root function...
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 44] --> User's input for square root: 2.0
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 128] --> Result: 2.0^0.5 = 1.4142135623730951.
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 29] --> User's choice is: 3
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 66] --> Using the natural log function...
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 70] --> User's input for square root: 12.0
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 111] --> Result: log(12.0) = 2.4849066497880004.
+[Time: 08:32 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 29] --> User's choice is: 6
+[Time: 08:32 AM # Date: 20/03/2023] [DEBUG] [File: org.example.Main # Line: 94] --> User is exiting the calculator application.
+[Time: 08:33 AM # Date: 20/03/2023] [INFO ] [File: org.example.Main # Line: 10] --> Starting the Calculator Application.
