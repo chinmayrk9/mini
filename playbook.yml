@@ -8,7 +8,7 @@
         state: started
 
     - name: pull docker image
-      shell: docker pull chinmayrk9/mini
+      shell: docker pull chinmayrk9/mini:v1
 
     - name: running container
-      shell: docker create -it --name Calc chinmayrk9/mini
+      shell: docker create -it --name Calc chinmayrk9/mini:v1
